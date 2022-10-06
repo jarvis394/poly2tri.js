@@ -1,7 +1,7 @@
 /*
  * Poly2Tri Copyright (c) 2009-2014, Poly2Tri Contributors
  * http://code.google.com/p/poly2tri/
- * 
+ *
  * poly2tri.js (JavaScript port) (c) 2009-2014, Poly2Tri Contributors
  * https://github.com/r3mi/poly2tri.js
  *
@@ -48,7 +48,7 @@
  * @public
  * @type {module:poly2tri}
  */
-var previousPoly2tri = global.poly2tri;
+// var previousPoly2tri = global.poly2tri;
 /**
  * For Browser + &lt;script&gt; :
  * reverts the {@linkcode poly2tri} global object to its previous value,
@@ -60,10 +60,10 @@ var previousPoly2tri = global.poly2tri;
  * @return {module:poly2tri} instance called
  */
 // (this feature is not automatically provided by browserify).
-exports.noConflict = function() {
-    global.poly2tri = previousPoly2tri;
-    return exports;
-};
+// exports.noConflict = function() {
+//     global.poly2tri = previousPoly2tri;
+//     return exports;
+// };
 
 /**
  * poly2tri library version

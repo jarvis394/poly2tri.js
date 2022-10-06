@@ -13,7 +13,7 @@
   "latedef": true,
   "newcap": true,
   "trailing": true,
-  "maxcomplexity": 5,
+  "maxcomplexity": false,
   "freeze":true,
   "indent": 4
 }

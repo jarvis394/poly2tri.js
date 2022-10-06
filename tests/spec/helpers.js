@@ -91,8 +91,9 @@ exports.randomPolygon = randomPolygon;
  * @param {Array<Array{x,y}>} pointsLists   array of array of Points
  * @returns {Triangle} a triangle failing the test, or null if success
  */
+/*jshint maxcomplexity:false */
 function testTrianglesToEqualVertices(triangles, pointsLists) {
-    /* jshint maxcomplexity:8 */
+    /* jshint maxcomplexity:12 */
     var tpoints = [];
     triangles.forEach(function (triangle) {
         tpoints.push.apply(tpoints, triangle.getPoints());

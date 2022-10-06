@@ -1,12 +1,12 @@
 /*
  * Poly2Tri Copyright (c) 2009-2014, Poly2Tri Contributors
  * http://code.google.com/p/poly2tri/
- * 
+ *
  * poly2tri.js (JavaScript port) (c) 2009-2014, Poly2Tri Contributors
  * https://github.com/r3mi/poly2tri.js
  *
  * All rights reserved.
- * 
+ *
  * Distributed under the 3-clause BSD License, see LICENSE.txt
  */
 
@@ -19,7 +19,7 @@
  * Note
  * ====
  * the structure of this JavaScript version of poly2tri intentionally follows
- * as closely as possible the structure of the reference C++ version, to make it 
+ * as closely as possible the structure of the reference C++ version, to make it
  * easier to keep the 2 versions in sync.
  */
 
@@ -197,6 +197,7 @@ Triangle.prototype.setInterior = function(interior) {
  * @param {Triangle} t Triangle object.
  * @throws {Error} if can't find objects
  */
+/*jshint maxcomplexity:false */
 Triangle.prototype.markNeighborPointers = function(p1, p2, t) {
     var points = this.points_;
     // Here we are comparing point references, not values
@@ -468,7 +469,7 @@ Triangle.prototype.legalize = function(opoint, npoint) {
 };
 
 /**
- * Returns the index of a point in the triangle. 
+ * Returns the index of a point in the triangle.
  * The point *must* be a reference to one of the triangle's vertices.
  * @private
  * @param {XY} p - point object with {x,y}
@@ -545,7 +546,7 @@ Triangle.prototype.markConstrainedEdgeByEdge = function(edge) {
  */
 Triangle.prototype.markConstrainedEdgeByPoints = function(p, q) {
     var points = this.points_;
-    // Here we are comparing point references, not values        
+    // Here we are comparing point references, not values
     if ((q === points[0] && p === points[1]) || (q === points[1] && p === points[0])) {
         this.constrained_edge[2] = true;
     } else if ((q === points[0] && p === points[2]) || (q === points[2] && p === points[0])) {
